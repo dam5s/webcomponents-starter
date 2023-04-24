@@ -4,8 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "test": "web-test-runner \"test/**/*.test.ts\" --node-resolve",
-    "test:watch": "web-test-runner \"test/**/*.test.ts\" --node-resolve --watch"
+    "test": "TZ='US/Mountain' web-test-runner \"test/**/*.test.ts\" --node-resolve",
+    "test:watch": "TZ='US/Mountain' web-test-runner \"test/**/*.test.ts\" --node-resolve --watch"
   },
   "dependencies": {
     "lit": "^2.6.1"
