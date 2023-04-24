@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "lint": "eslint",
     "test": "TZ='US/Mountain' web-test-runner \"test/**/*.test.ts\" --node-resolve",
     "test:watch": "TZ='US/Mountain' web-test-runner \"test/**/*.test.ts\" --node-resolve --watch"
   },
