@@ -15,9 +15,3 @@ export class DisplayDateComponent extends LitElement {
         return html`${new Date(this.epochSeconds * 1000).toLocaleString()}`;
     }
 }
-
-declare global {
-    interface HTMLElementTagNameMap {
-        'display-date': DisplayDateComponent
-    }
-}
