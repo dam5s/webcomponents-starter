@@ -1,9 +1,9 @@
 import {assert, fixture, html} from '@open-wc/testing';
 import {DisplayDateComponent} from '../src/display-date-component';
 
-const test = it;
 
 describe('display-date', () => {
+    const test = it;
 
     test('rendering', async () => {
         const el = await fixture(html`

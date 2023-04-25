@@ -5,10 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Web Components</title>
     <script type="module" src="/src/main.ts"></script>
+    <style>
+        :root {
+            font-size: 62.5%;
+        }
+
+        body {
+            font-size: 1.7rem;
+            padding: 12rem;
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+
+        h1, h2 {
+            margin: 0;
+            font-size: 3.6rem;
+            font-weight: 500;
+        }
+
+        h2 {
+            font-size: 2.4rem;
+        }
+
+        input {
+            font-size: 1.7rem;
+        }
+
+        section {
+            background: #f0f0f0;
+            border-radius: 1.2rem;
+            padding: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        tag-list-input {
+            background: white;
+            display: flex;
+            gap: 1rem;
+            border-radius: .2rem;
+        }
+        tag-list-input ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            gap: 1rem;
+        }
+        tag-list-input li {
+            background: lightgrey;
+            padding: .5rem 1rem;
+            border-radius: .2rem;
+            cursor: pointer;
+        }
+        tag-list-input li:hover {
+            background: darkgrey;
+        }
+        tag-list-input li:active {
+            position: relative;
+            top: 1px;
+        }
+        tag-list-input input {
+            border: none;
+            background: transparent;
+            outline: none;
+        }
+    </style>
 </head>
 <body>
 
-<display-date epochSeconds="1682344758250"/>
+<h1>Web Components</h1>
+
+<section>
+    <h2>Display Date</h2>
+    <display-date epochSeconds="1682344758"/>
+</section>
+
+<section>
+    <h2>Tag List Input</h2>
+    <tag-list-input name="my-tags" value="foo,bar"/>
+</section>
 
 </body>
 </html>
