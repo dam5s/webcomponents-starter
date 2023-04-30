@@ -4,7 +4,7 @@ import {customElement, property} from 'lit/decorators.js';
 @customElement('display-date')
 export class DisplayDateComponent extends LitElement {
 
-    @property({type: Number})
+    @property({attribute: 'epoch-seconds', type: Number})
     epochSeconds = 0;
 
     createRenderRoot() {

@@ -1,5 +1,5 @@
 import {expect, fixture, html, nextFrame} from '@open-wc/testing';
-import {TagListInputComponent} from '../src/tag-list-input';
+import {TagListInputComponent} from '../../src/components/tag-list-input-component';
 
 describe('tag-list-input', () => {
     const test = it;

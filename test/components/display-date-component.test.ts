@@ -1,5 +1,5 @@
 import {assert, fixture, html} from '@open-wc/testing';
-import {DisplayDateComponent} from '../src/display-date-component';
+import {DisplayDateComponent} from '../../src/components/display-date-component';
 
 
 describe('display-date', () => {
@@ -7,7 +7,7 @@ describe('display-date', () => {
 
     test('rendering', async () => {
         const el = await fixture(html`
-            <display-date epochSeconds='1682344758'></display-date>
+            <display-date epoch-seconds='1682344758'></display-date>
         `);
 
         assert.instanceOf(el, DisplayDateComponent);

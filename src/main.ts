@@ -1,2 +1,2 @@
-import './display-date-component.ts';
-import './tag-list-input.ts';
+import './components/display-date-component.ts';
+import './components/tag-list-input-component.ts';
