@@ -1,5 +1,5 @@
 import {html, LitElement} from 'lit';
-import {Ref, ref, createRef} from 'lit/directives/ref.js';
+import {createRef, ref, Ref} from 'lit/directives/ref.js';
 import {customElement, property} from 'lit/decorators.js';
 
 @customElement('tag-list-input')
@@ -17,12 +17,16 @@ export class TagListInputComponent extends LitElement {
 
     private newTagInputRef: Ref<HTMLInputElement> = createRef();
 
-    private getTagInput() {
-        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-        return this.newTagInputRef.value!;
-    }
     private getTagInputText() {
-        return this.getTagInput().value;
+        const input = this.newTagInputRef.value;
+        return input ? input.value : '';
+    }
+
+    private clearTagInputText() {
+        const input = this.newTagInputRef.value;
+        if (input) {
+            input.value = '';
+        }
     }
 
     private tagList() {
@@ -34,7 +38,7 @@ export class TagListInputComponent extends LitElement {
     }
 
     private addTag() {
-        const newTag = this.getTagInput().value.trim();
+        const newTag = this.getTagInputText().trim();
         if (newTag.length === 0) {
             return;
         }
@@ -43,7 +47,7 @@ export class TagListInputComponent extends LitElement {
         const newTags = Array.from(new Set(currentTags.concat(newTag)));
         this.value = newTags.join(',');
 
-        this.getTagInput().value = '';
+        this.clearTagInputText();
     }
 
     private removeTag(tag: string) {
